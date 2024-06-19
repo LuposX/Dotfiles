@@ -8,6 +8,8 @@ I am using the following software:
 - **Editor:** [LunaVim](https://www.lunarvim.org/)
 - **Shell:** [Fish](https://fishshell.com/)
 - **Window-Switcher:** [Rofi](https://github.com/davatorium/rofi)
-- **Font:** [Hack Nerd Font](https://www.nerdfonts.com/) 
+- **Font:** [Hack Nerd Font](https://www.nerdfonts.com/)
+
+To update the dotfiles the `config` command aliased in the `fish.config` file should be used e.g. instead of `git add ~/.config/nvim`, do `config add ~/.config/nvim`.
 
 ![](Screenshot_SetUp.png)
