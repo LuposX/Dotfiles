@@ -5,6 +5,7 @@ I am using the following software:
 - **Window-Manager:** [i3](https://i3wm.org/)
 - **Status-Bar:** [Polybar](https://github.com/polybar/polybar)
 - **Terminal:** [Kitty](https://sw.kovidgoyal.net/kitty/)
+- **Editor:** [LunaVim](https://www.lunarvim.org/)
 - **Shell:** [Fish](https://fishshell.com/)
 - **Window-Switcher:** [Rofi](https://github.com/davatorium/rofi)
 - **Font:** [Hack Nerd Font](https://www.nerdfonts.com/) 
