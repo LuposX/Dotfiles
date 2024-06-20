@@ -9,6 +9,8 @@ lvim.keys.normal_mode["<leader>mp"] = ":MarkdownPreview<CR>"
 lvim.keys.normal_mode["<TAB>"] = ":bnext<CR>"
 vim.wo.relativenumber = true
 lvim.colorscheme = "gruvbox"
+vim.opt.linebreak = true
+vim.opt.wrap = true
 
 lvim.plugins = {
   {
