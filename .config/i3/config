@@ -60,6 +60,9 @@ bindsym $mod+f exec nautilus
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# To make screenshots
+bindsym Print exec "flameshot gui"
+
 # start dmenu (a program launcher)
 # bindsym $mod+m exec --no-startup-id dmenu_run # old
 bindsym $mod+m exec --no-startup-id rofi -show run
@@ -221,3 +224,6 @@ exec_always feh --bg-fill ~/Pictures/wallpaper.png
 # bar {
 #        status_command i3status
 #}
+
+# Needed to mount external hard disks
+exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
