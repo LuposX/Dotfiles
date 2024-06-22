@@ -29,6 +29,8 @@ end
 # This is for backin up, dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
+alias v='lvim'
+
 # This is if you want to enable, zeliji by default 
 #if set -q ZELLIJ
 #else
