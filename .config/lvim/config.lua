@@ -48,5 +48,33 @@ lvim.plugins = {
     "ellisonleao/gruvbox.nvim",
     priority = 1000 ,
     config = true,
-  }
+  },
+  "kdheepak/cmp-latex-symbols",
+  "KeitaNakamura/tex-conceal.vim"
+
 }
+
+-- LATEX/Markdown Stuff
+--------
+
+require("lvim.lsp.manager").setup("ltex")
+
+-- Setup Lsp.
+local capabilities = require("lvim.lsp").common_capabilities()
+require("lvim.lsp.manager").setup("texlab", {
+  on_attach = require("lvim.lsp").common_on_attach,
+  on_init = require("lvim.lsp").common_on_init,
+  capabilities = capabilities,
+})
+
+-- Setup formatters.
+local formatters = require("lvim.lsp.null-ls.formatters")
+formatters.setup({
+  { command = "latexindent", filetypes = { "tex" } },
+})
+
+-- Set a linter.
+local linters = require("lvim.lsp.null-ls.linters")
+linters.setup({
+  { command = "chktex", filetypes = { "tex" } },
+})
