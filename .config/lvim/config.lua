@@ -57,13 +57,13 @@ lvim.plugins = {
 -- LATEX/Markdown Stuff
 --------
 
-require("lvim.lsp.manager").setup("ltex")
 
--- Setup Lsp.
+-- Setup Lsp
 local capabilities = require("lvim.lsp").common_capabilities()
 require("lvim.lsp.manager").setup("texlab", {
   on_attach = require("lvim.lsp").common_on_attach,
   on_init = require("lvim.lsp").common_on_init,
+  filetypes = {"markdown", "text", "bib", "rst", "plaintext"},
   capabilities = capabilities,
 })
 
