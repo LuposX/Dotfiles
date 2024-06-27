@@ -55,7 +55,10 @@ lvim.plugins = {
 
 -- LATEX/Markdown Stuff
 --------
-require("lvim.lsp.manager").setup("ltex")
+require("lvim.lsp.manager").setup("ltex", {
+  -- Specify the file types you want ltex to apply to
+  filetypes = { "markdown", "tex", "bib", "txt" }
+})
 
 -- Setup Lsp
 local capabilities = require("lvim.lsp").common_capabilities()
