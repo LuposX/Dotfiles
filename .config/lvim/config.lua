@@ -50,20 +50,18 @@ lvim.plugins = {
     config = true,
   },
   "kdheepak/cmp-latex-symbols",
-  "KeitaNakamura/tex-conceal.vim"
-
+  "KeitaNakamura/tex-conceal.vim",
 }
 
 -- LATEX/Markdown Stuff
 --------
-
+require("lvim.lsp.manager").setup("ltex")
 
 -- Setup Lsp
 local capabilities = require("lvim.lsp").common_capabilities()
 require("lvim.lsp.manager").setup("texlab", {
   on_attach = require("lvim.lsp").common_on_attach,
   on_init = require("lvim.lsp").common_on_init,
-  filetypes = {"markdown", "text", "bib", "rst", "plaintext"},
   capabilities = capabilities,
 })
 
