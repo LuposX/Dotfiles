@@ -170,8 +170,8 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Default startup
-exec --no-startup-id i3-msg "workspace 1; exec kitty --hold fastfetch"  
-exec --no-startup-id i3-msg "workspace 1; exec kitty --hold cbonsai -S -t 0.5 -m '$(fortune)'"
+exec --no-startup-id i3-msg 'workspace 1; exec kitty --hold fastfetch'  
+exec --no-startup-id i3-msg 'workspace 1; exec kitty --hold cbonsai -S -t 0.5 -m "$(fortune)"'
 exec --no-startup-id i3-msg 'workspace 2; exec firefox'
 
 # reload the configuration file
