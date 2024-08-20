@@ -12,4 +12,8 @@ I am using the following software:
 
 To update the dotfiles the `config` command aliased in the `fish.config` file should be used e.g. instead of `git add ~/.config/nvim`, do `config add ~/.config/nvim`.
 
-![](desktop.jpg)
+![](/Pictures/desktop/desktop.jpg)
+
+![](/Pictures/desktop/desktop2.jpg)
+
+![](/Pictures/desktop/desktop3.jpg)
