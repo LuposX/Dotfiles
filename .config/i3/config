@@ -55,7 +55,7 @@ bindsym $mod+t exec kitty
 bindsym $mod+i exec firefox
 
 # files 
-bindsym $mod+f exec nautilus
+bindsym $mod+f exec thunar
 
 # kill focused window
 bindsym $mod+Shift+q kill

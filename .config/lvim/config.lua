@@ -14,10 +14,22 @@ vim.opt.wrap = true
 
 lvim.plugins = {
   {
-  "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    ft = { "markdown" },
-    build = function() vim.fn["mkdp#util#install"]() end,
+    "iamcco/markdown-preview.nvim",
+    ft = "markdown",
+    build = function()
+        vim.fn["mkdp#util#install"]()
+    end,
+    config = function()
+      vim.cmd([[do FileType]])
+      vim.cmd([[
+         function OpenMarkdownPreview (url)
+            let cmd = "firefox -P 'Clean' --new-window " . shellescape(a:url) . " &"
+            silent call system(cmd)
+         endfunction
+      ]])
+      vim.g.mkdp_browserfunc = "OpenMarkdownPreview"
+      vim.g.mkdp_theme = "dark"
+    end,
   },
   {
    "HakonHarnes/img-clip.nvim",
